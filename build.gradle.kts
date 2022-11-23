@@ -6,9 +6,6 @@ plugins {
     id("org.jetbrains.compose")
 }
 
-group "dev.kix2902"
-version "1.0-SNAPSHOT"
-
 repositories {
     google()
     mavenCentral()
