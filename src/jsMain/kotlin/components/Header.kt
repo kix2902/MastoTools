@@ -14,7 +14,7 @@ fun Header() {
         classes(MTHeader.header)
     }) {
         A(attrs = {
-            href(window.location.host)
+            href(window.location.origin)
             title("MastoTools")
             classes(MTHeader.title)
         }) {
