@@ -8,11 +8,11 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
 import org.jetbrains.compose.web.renderComposable
 import org.w3c.dom.url.URLSearchParams
-import styles.AppStylesheet
+import styles.MTStylesheet
 
 fun main() {
     renderComposable(rootElementId = "root") {
-        Style(AppStylesheet)
+        Style(MTStylesheet)
 
         val params = URLSearchParams(window.location.search)
 
