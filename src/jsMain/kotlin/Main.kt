@@ -17,6 +17,8 @@ fun main() {
         val params = URLSearchParams(window.location.search)
 
         val app = params.get("app")
+
+        val isValidApp = app in arrayOf("info", "throot", "", null)
         when (app) {
             "info" -> {
                 Div(attrs = {
@@ -29,9 +31,7 @@ fun main() {
                 }
             }
 
-            null -> MainScreen()
-
-            else -> window.location.href = "/"
+            else -> MainScreen(isValidApp)
         }
     }
 }
