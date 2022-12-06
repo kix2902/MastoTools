@@ -1,8 +1,7 @@
-import org.jetbrains.compose.compose
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
 
 plugins {
-    kotlin("multiplatform")
+    kotlin("js")
     id("org.jetbrains.compose")
 }
 
@@ -14,17 +13,18 @@ repositories {
 
 kotlin {
     js(IR) {
-        browser()
-        binaries.executable()
-    }
-    sourceSets {
-        val jsMain by getting {
-            dependencies {
-                implementation(compose.web.core)
-                implementation(compose.runtime)
+        browser {
+            runTask {
+                dependsOn(":developmentExecutableCompileSync")
             }
         }
+        binaries.executable()
     }
+}
+
+dependencies {
+    implementation(compose.web.core)
+    implementation(compose.runtime)
 }
 
 // a temporary workaround for a bug in jsRun invocation - see https://youtrack.jetbrains.com/issue/KT-48273
