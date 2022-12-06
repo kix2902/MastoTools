@@ -22,4 +22,12 @@ object MTMain : StyleSheet(MTStylesheet) {
         paddingTop(50.px)
         paddingBottom(50.px)
     }
+
+    val errorBlock by style {
+        color(Color.white)
+        backgroundColor(Color.red)
+        fontWeight(700)
+        padding(20.px)
+        borderRadius(20.px)
+    }
 }

@@ -15,14 +15,18 @@ fun Footer() {
     Div(attrs = {
         classes(MTFooter.footer)
     }) {
-        Span { Text("Website made by ") }
+        Span(attrs = {
+            classes(MTFooter.footerText)
+        }) {
+            Text("Website made by ")
+        }
         A(attrs = {
             href("https://paquita.masto.host/@kix2902")
             target(ATarget.Blank)
             title("@kix2902@paquita.masto.host")
         }) {
             Span(attrs = {
-                classes(MTFooter.linkstyle)
+                classes(MTFooter.footerLink)
             }) {
                 Text("@kix2902@paquita.masto.host")
             }

@@ -5,11 +5,14 @@ import org.jetbrains.compose.web.css.*
 object MTFooter : StyleSheet(MTStylesheet) {
     val footer by style {
         width(100.percent)
-        fontSize(MTCSSVariables.fontSize.value() - 2.px)
     }
 
-    val linkstyle by style {
-        fontSize(18.px)
+    val footerText by style {
+        fontSize(MTCSSVariables.footerFontSize.value())
+    }
+
+    val footerLink by style {
+        fontSize(MTCSSVariables.footerFontSize.value() + 2.px)
 
         media(mediaMaxWidth(640.px)) {
             self style {
