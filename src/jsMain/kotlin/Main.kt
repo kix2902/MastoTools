@@ -18,16 +18,36 @@ fun main() {
 
         val app = params.get("app")
 
-        val isValidApp = app in arrayOf("info", "throot", "", null)
+        val isValidApp = app in arrayOf("instance", "user", "throot", "", null)
         when (app) {
-            "info" -> {
+            "instance" -> {
                 Div(attrs = {
                     style {
                         textAlign("center")
                         fontSize(4.em)
                     }
                 }) {
-                    Text("Mastodon Info")
+                    Text("Instance Info")
+                }
+            }
+            "user" -> {
+                Div(attrs = {
+                    style {
+                        textAlign("center")
+                        fontSize(4.em)
+                    }
+                }) {
+                    Text("User Info")
+                }
+            }
+            "throot" -> {
+                Div(attrs = {
+                    style {
+                        textAlign("center")
+                        fontSize(4.em)
+                    }
+                }) {
+                    Text("Throot")
                 }
             }
 
