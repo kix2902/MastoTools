@@ -8,12 +8,13 @@ import org.jetbrains.compose.web.dom.Text
 import styles.MTMain
 
 @Composable
-internal fun MainScreen(isValidApp: Boolean) {
+internal fun MainScreen(app: String?) {
     Div(attrs = {
         classes(MTMain.mainGroup)
     }) {
         Header()
 
+        val isValidApp = app in arrayOf("", null)
         if (!isValidApp) {
             Div(attrs = {
                 classes(MTMain.errorBlock)

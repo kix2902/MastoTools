@@ -17,8 +17,6 @@ fun main() {
         val params = URLSearchParams(window.location.search)
 
         val app = params.get("app")
-
-        val isValidApp = app in arrayOf("instance", "user", "throot", "", null)
         when (app) {
             "instance" -> {
                 Div(attrs = {
@@ -51,7 +49,7 @@ fun main() {
                 }
             }
 
-            else -> MainScreen(isValidApp)
+            else -> MainScreen(app)
         }
     }
 }
